@@ -1,0 +1,19 @@
+services:
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    networks:
+      - calendar-network
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: calendar_db
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: calendar
+    # (this is just an example, not intended to be a production configuration)
+
+networks:
+  calendar-network:
+    driver: bridge
