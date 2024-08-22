@@ -2,7 +2,7 @@ from datetime import datetime
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from sqlalchemy import create_engine, update
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from event import Event
